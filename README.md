@@ -1,5 +1,12 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Current Deployment
+
+Deployed the proportional single-line logo layout.
+
+Production URL: https://advisory-services-platform-design-v-one.vercel.app
+Build URL: https://advisory-services-platform-design-v2-mcds87x9u.vercel.app
+
 ## Getting Started
 
 First, run the development server:
