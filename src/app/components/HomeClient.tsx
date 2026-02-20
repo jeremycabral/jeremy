@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   TrendingUp,
@@ -23,6 +24,9 @@ import airtaskerLogo from "../../../Advisory Services/src/assets/992b4ac11584a5a
 import { ChatWidget } from "./ChatWidget";
 
 export function HomeClient() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   const founderSrc =
     typeof founderStoryImg === "string" ? founderStoryImg : founderStoryImg.src;
   const heroSrc = typeof heroImg === "string" ? heroImg : heroImg.src;
@@ -54,17 +58,17 @@ export function HomeClient() {
       <ChatWidget />
 
       {/* Hero Section - Founder Style (Dark) */}
-      <section className="relative bg-[#0a0a0a] text-white h-screen min-h-[600px] flex items-center overflow-hidden pt-20">
+      <section className="relative bg-[#0a0a0a] text-white min-h-screen flex items-start lg:items-center overflow-hidden pt-44 md:pt-36 pb-10">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-orange-600/10 blur-3xl rounded-full translate-x-1/2 -translate-y-1/2"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start lg:items-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="inline-flex items-center space-x-2 px-3 py-1 bg-orange-600/20 border border-orange-600/30 rounded-full text-orange-500 font-medium mb-8">
+              <div className="inline-flex items-center space-x-2 px-3 py-1 bg-orange-600/20 border border-orange-600/30 rounded-full text-orange-500 font-medium mt-8 mb-3">
                 <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
                 <span className="text-sm tracking-wide uppercase">
                   Accepting Applications
@@ -78,30 +82,13 @@ export function HomeClient() {
                 </span>
               </h1>
 
-              <p className="text-lg text-gray-400 mb-8 max-w-lg leading-relaxed">
+              <p className="text-lg text-gray-400 mb-4 max-w-lg leading-relaxed">
                 I bootstrapped my last company to $100M+ revenue over 17 years.
                 Now, I&apos;m sharing the exact playbooks and AI execution systems
                 to help you do it faster.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="https://www.learnlikeme.ai/free-resources"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white rounded-lg font-medium hover:bg-white/10 transition-colors"
-                >
-                  Free Playbooks <ExternalLink className="ml-2" size={18} />
-                </a>
-                <Link
-                  href="/apply"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-orange-600 text-white rounded-lg font-bold hover:bg-orange-700 transition-all hover:scale-105 shadow-[0_0_20px_rgba(234,88,12,0.3)]"
-                >
-                  Work with Me <ArrowRight className="ml-2" size={20} />
-                </Link>
-              </div>
-
-              <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm text-gray-500 font-medium">
+              <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm text-gray-500 font-medium">
                 <div className="flex items-center">
                   <CheckCircle className="text-orange-500 mr-2 flex-shrink-0" size={16} />
                   <span>Growth Strategy breakthroughs</span>
@@ -125,9 +112,9 @@ export function HomeClient() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
+              className="relative flex flex-col"
             >
-              <div className="relative h-[75vh] max-h-[800px] w-auto aspect-[4/5] mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
+              <div className="relative h-[75vh] max-h-[800px] w-auto aspect-[4/5] mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl border border-white/10 group flex-shrink-0">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
                 <img
                   src={heroSrc}
@@ -157,6 +144,24 @@ export function HomeClient() {
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+              <div className="flex flex-1 min-h-[180px] flex-col items-center justify-center pt-8 pb-4">
+                <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                  <Link
+                    href="/apply"
+                    className="inline-flex items-center justify-center px-8 py-4 bg-orange-600 text-white rounded-lg font-bold hover:bg-orange-700 transition-all hover:scale-105 shadow-[0_0_20px_rgba(234,88,12,0.3)]"
+                  >
+                    Work with Me <ArrowRight className="ml-2" size={20} />
+                  </Link>
+                  <a
+                    href="https://www.learnlikeme.ai/free-resources"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white rounded-lg font-medium hover:bg-white/10 transition-colors"
+                  >
+                    Free Playbooks <ExternalLink className="ml-2" size={18} />
+                  </a>
                 </div>
               </div>
             </motion.div>
@@ -201,10 +206,10 @@ export function HomeClient() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-24 bg-white" id="services">
+      <section className="py-12 md:py-16 bg-white" id="services">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-10 md:mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-3">
               How We Work Together
             </h2>
             <p className="text-xl text-gray-600">
@@ -339,20 +344,20 @@ export function HomeClient() {
       </section>
 
       {/* Content Highlights */}
-      <section className="py-24 bg-gray-50">
+      <section className="pt-12 md:pt-16 pb-8 md:pb-10 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-end mb-12">
+          <div className="flex flex-wrap justify-between items-end gap-4 mb-8">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">
+              <h2 className="text-3xl font-bold text-gray-900 mb-1">
                 Latest Insights
               </h2>
               <p className="text-gray-600">Playbooks and essays on scaling.</p>
             </div>
             <Link
               href="/blog"
-              className="text-orange-600 font-bold hover:text-orange-700"
+              className="text-orange-600 font-bold hover:text-orange-700 inline-flex items-center whitespace-nowrap"
             >
-              View all posts &rarr;
+              View all posts <ArrowRight className="ml-1" size={18} />
             </Link>
           </div>
 
@@ -434,14 +439,14 @@ export function HomeClient() {
             </div>
 
             {/* Newsletter Card */}
-            <div className="bg-orange-50 rounded-xl p-8 border border-orange-200 flex flex-col justify-center">
-              <div className="w-12 h-12 bg-white text-orange-600 rounded-lg flex items-center justify-center mb-4 shadow-sm">
+            <div className="bg-orange-50 rounded-xl p-6 border border-orange-200 flex flex-col justify-center">
+              <div className="w-12 h-12 bg-white text-orange-600 rounded-lg flex items-center justify-center mb-3 shadow-sm">
                 <Mail size={24} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <h3 className="text-xl font-bold text-gray-900 mb-1.5">
                 Receive my Weekly Newsletter
               </h3>
-              <p className="text-gray-600 text-sm mb-6">
+              <p className="text-gray-600 text-sm mb-4">
                 Get actionable growth playbooks, insights and systems in your inbox
               </p>
               <form className="space-y-3">
@@ -460,10 +465,10 @@ export function HomeClient() {
       </section>
 
       {/* Social Proof Masonry */}
-      <section className="py-24 bg-white">
+      <section className="py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-10 md:mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-3">
               Results Speak Louder
             </h2>
             <p className="text-xl text-gray-600">
@@ -471,8 +476,39 @@ export function HomeClient() {
             </p>
           </div>
 
-          <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
-            <Masonry gutter="24px">
+          {mounted ? (
+            <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+              <Masonry gutter="24px">
+                {testimonials.map((t, i) => (
+                  <div
+                    key={i}
+                    className="bg-gray-50 p-6 rounded-xl border border-gray-100"
+                  >
+                    <div className="flex items-center mb-4">
+                      <img
+                        src={t.image}
+                        alt={t.name}
+                        className="w-10 h-10 rounded-full mr-3 object-cover"
+                      />
+                      <div>
+                        <div className="font-bold text-gray-900">{t.name}</div>
+                        <div className="text-sm text-gray-500">{t.role}</div>
+                      </div>
+                    </div>
+                    <div className="flex text-orange-400 mb-3">
+                      <Star size={16} fill="currentColor" />
+                      <Star size={16} fill="currentColor" />
+                      <Star size={16} fill="currentColor" />
+                      <Star size={16} fill="currentColor" />
+                      <Star size={16} fill="currentColor" />
+                    </div>
+                    <p className="text-gray-700 leading-relaxed">"{t.text}"</p>
+                  </div>
+                ))}
+              </Masonry>
+            </ResponsiveMasonry>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {testimonials.map((t, i) => (
                 <div
                   key={i}
@@ -499,8 +535,8 @@ export function HomeClient() {
                   <p className="text-gray-700 leading-relaxed">"{t.text}"</p>
                 </div>
               ))}
-            </Masonry>
-          </ResponsiveMasonry>
+            </div>
+          )}
 
           <div className="mt-12 text-center">
             <Link
@@ -514,13 +550,13 @@ export function HomeClient() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-orange-600 relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-orange-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
         <div className="max-w-4xl mx-auto text-center relative z-10 px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Stop Guessing. Start Scaling.
           </h2>
-          <p className="text-xl text-orange-100 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-orange-100 mb-6 max-w-2xl mx-auto">
             We only work with a limited number of founders each quarter to
             ensure maximum impact. Apply now to secure your spot.
           </p>
@@ -530,7 +566,7 @@ export function HomeClient() {
           >
             Start Your Application
           </Link>
-          <p className="mt-6 text-orange-200 text-sm">
+          <p className="mt-4 text-orange-200 text-sm">
             Application takes 2 minutes.
           </p>
         </div>

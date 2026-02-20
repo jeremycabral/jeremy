@@ -158,12 +158,14 @@ export function Coaching() {
               >
                 Learn More
               </Link>
-              <Link 
-                to="/apply" 
-                className="w-full py-3 text-center bg-orange-600 text-white rounded-xl font-bold hover:bg-orange-700 transition-colors shadow-lg shadow-orange-200"
+              <a 
+                href="https://api.leadconnectorhq.com/widget/booking/pQ17EnAoNlzccW9ACRB5" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3 text-center bg-orange-600 text-white rounded-xl font-bold hover:bg-orange-700 transition-colors shadow-lg shadow-orange-200 block"
               >
                 Book Deep Dive
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -172,9 +174,14 @@ export function Coaching() {
       <section className="py-20 bg-gray-50 text-center px-4">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Not sure which path is right?</h2>
         <p className="text-gray-600 mb-8">Book a discovery call and we can discuss where you fit.</p>
-        <Link to="/apply" className="text-orange-600 font-semibold hover:text-orange-700 flex items-center justify-center">
+        <a 
+          href="https://api.leadconnectorhq.com/widget/booking/pQ17EnAoNlzccW9ACRB5" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="text-orange-600 font-semibold hover:text-orange-700 flex items-center justify-center"
+        >
           Book a Discovery Call <ArrowRight className="ml-2" size={20} />
-        </Link>
+        </a>
       </section>
 
       <Footer />

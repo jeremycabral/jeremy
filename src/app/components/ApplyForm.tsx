@@ -11,6 +11,7 @@ import Link from "next/link";
 
 export function ApplyForm({ service }: { service?: string }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -34,11 +35,18 @@ export function ApplyForm({ service }: { service?: string }) {
     // Simulate network delay
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
-    // Mock form submission
-    alert(
-      "Thank you for applying! I will review your application and get back to you within 48 hours."
-    );
+    setShowSuccessModal(true);
     setIsSubmitting(false);
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      company: "",
+      revenue: "",
+      website: "",
+      challenge: "",
+      service: service || "startup",
+    });
   };
 
   const handleChange = (
@@ -54,7 +62,7 @@ export function ApplyForm({ service }: { service?: string }) {
 
   return (
     <>
-      <section className="pt-40 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-44 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <motion.div
@@ -180,7 +188,7 @@ export function ApplyForm({ service }: { service?: string }) {
                         htmlFor="name"
                         className="block text-sm font-medium text-gray-700 mb-2"
                       >
-                        Full Name
+                        Full Name <span className="text-orange-600">*</span>
                       </label>
                       <input
                         type="text"
@@ -197,7 +205,7 @@ export function ApplyForm({ service }: { service?: string }) {
                         htmlFor="email"
                         className="block text-sm font-medium text-gray-700 mb-2"
                       >
-                        Work Email
+                        Work Email <span className="text-orange-600">*</span>
                       </label>
                       <input
                         type="email"
@@ -218,7 +226,7 @@ export function ApplyForm({ service }: { service?: string }) {
                         htmlFor="company"
                         className="block text-sm font-medium text-gray-700 mb-2"
                       >
-                        Company Name
+                        Company Name <span className="text-orange-600">*</span>
                       </label>
                       <input
                         type="text"
@@ -271,7 +279,7 @@ export function ApplyForm({ service }: { service?: string }) {
                         htmlFor="revenue"
                         className="block text-sm font-medium text-gray-700 mb-2"
                       >
-                        Annual Revenue
+                        Annual Revenue <span className="text-orange-600">*</span>
                       </label>
                       <div className="relative">
                         <select
@@ -303,7 +311,7 @@ export function ApplyForm({ service }: { service?: string }) {
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
                       What is the biggest bottleneck preventing you from growing
-                      right now?
+                      right now? <span className="text-orange-600">*</span>
                     </label>
                     <textarea
                       name="challenge"
@@ -351,6 +359,42 @@ export function ApplyForm({ service }: { service?: string }) {
           </div>
         </div>
       </section>
+
+      {/* Success modal - matches site style */}
+      {showSuccessModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50"
+          onClick={() => setShowSuccessModal(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="success-modal-title"
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.2 }}
+            className="bg-white rounded-2xl shadow-xl border border-gray-200 max-w-md w-full p-8 text-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <CheckCircle className="text-orange-600" size={32} />
+            </div>
+            <h2 id="success-modal-title" className="text-xl font-bold text-gray-900 mb-3">
+              Application received
+            </h2>
+            <p className="text-gray-600 mb-8">
+              Thank you for applying! I will review your application and get back to you within 48 hours.
+            </p>
+            <button
+              type="button"
+              onClick={() => setShowSuccessModal(false)}
+              className="w-full py-3 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-lg transition-colors"
+            >
+              OK
+            </button>
+          </motion.div>
+        </div>
+      )}
     </>
   );
 }

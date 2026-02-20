@@ -9,7 +9,7 @@ export default function SpeakingPage() {
       <Navigation />
 
       {/* Hero */}
-      <section className="relative pt-40 pb-20 px-4 sm:px-6 lg:px-8 bg-[#0a0a0a] text-white overflow-hidden">
+      <section className="relative pt-44 pb-20 px-4 sm:px-6 lg:px-8 bg-[#0a0a0a] text-white overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-40">
           <img
             src="https://images.unsplash.com/photo-1764874299006-bf4266427ec9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwdWJsaWMlMjBzcGVha2luZyUyMGNvbmZlcmVuY2UlMjBzdGFnZSUyMG1pY3xlbnwxfHx8fDE3Njk0MDE0NDV8MA&ixlib=rb-4.1.0&q=80&w=1080"
@@ -38,10 +38,10 @@ export default function SpeakingPage() {
       </section>
 
       {/* Topics */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-10 md:mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">
               Signature Topics
             </h2>
             <p className="text-gray-600">
@@ -103,12 +103,12 @@ export default function SpeakingPage() {
       </section>
 
       {/* Social Proof / Past Events */}
-      <section className="py-20 bg-white border-y border-gray-100">
+      <section className="py-10 md:py-12 bg-white border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm font-semibold text-gray-400 uppercase tracking-widest mb-10">
+          <p className="text-center text-sm font-semibold text-gray-400 uppercase tracking-widest mb-6">
             Previously Spoken At
           </p>
-          <div className="flex flex-wrap justify-center gap-12 opacity-60 grayscale hover:grayscale-0 transition-all">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8 opacity-60 grayscale hover:grayscale-0 transition-all">
             <span className="text-2xl font-bold text-gray-800">SaaStr</span>
             <span className="text-2xl font-bold text-gray-800">
               TechCrunch Disrupt
@@ -123,14 +123,15 @@ export default function SpeakingPage() {
       </section>
 
       {/* Speaker Kit CTA */}
-      <section className="py-24 bg-gray-50 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 md:py-16 bg-gray-50 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Event Planners
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Need my bio, headshots, or tech requirements? Download the full
-            speaker kit below.
+          <p className="text-xl text-gray-600 mb-6">
+            Need my bio, headshots, or tech requirements?
+            <br />
+            Download the full speaker kit below.
           </p>
           <button className="inline-flex items-center justify-center px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-orange-600 hover:text-orange-600 transition-colors font-semibold">
             <Download className="mr-2" size={20} /> Download Speaker Kit (PDF)

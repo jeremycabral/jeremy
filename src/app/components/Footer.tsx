@@ -111,7 +111,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.learnlikeme.ai/free-resources/founders-operating-system"
+                  href="https://www.learnlikeme.ai/free-resources/linkedin-growth-workshop-jeremy-cabral-braith-leung"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-orange-600 transition-colors"
@@ -144,7 +144,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} Jeremy Cabral. All rights reserved.</p>
+          <p>&copy; 2026 Jeremy Cabral. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/terms-of-use" className="hover:text-orange-600 transition-colors">
               Terms of Use

@@ -8,7 +8,7 @@ export default function CareersPage() {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      <section className="pt-40 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-44 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Work With Me</h1>
           <p className="text-xl text-gray-600 mb-8">

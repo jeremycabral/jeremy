@@ -8,10 +8,10 @@ export default function MediaPage() {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      <section className="pt-40 pb-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section className="pt-44 pb-8 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">In The Media</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">In The Media</h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-0">
             Interviews, podcasts, and articles featuring my thoughts on
             bootstrapping, scaling, and the future of AI.
           </p>
@@ -19,7 +19,7 @@ export default function MediaPage() {
       </section>
 
       {/* Featured Podcast */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-12 pb-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="bg-[#1a1a1a] rounded-3xl p-8 md:p-12 text-white flex flex-col md:flex-row gap-12 items-center">
             <div className="md:w-1/3">
@@ -56,13 +56,13 @@ export default function MediaPage() {
       </section>
 
       {/* Recent Appearances */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-10 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-10">
             Recent Appearances
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
               { title: "The Bootstrapped Founder", type: "Podcast", outlet: "Arvid Kahl", date: "Jan 2026" },
               { title: "Scaling from Zero to One", type: "Interview", outlet: "Indie Hackers", date: "Dec 2025" },
@@ -74,15 +74,15 @@ export default function MediaPage() {
               <a
                 href="#"
                 key={i}
-                className="group block bg-white border border-gray-200 rounded-xl p-6 hover:border-orange-600 transition-all hover:shadow-lg"
+                className="group block bg-white border border-gray-200 rounded-xl p-4 hover:border-orange-600 transition-all hover:shadow-lg"
               >
-                <div className="flex justify-between items-start mb-4">
+                <div className="flex justify-between items-start mb-3">
                   <div className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-bold rounded-full uppercase">
                     {item.type}
                   </div>
                   <span className="text-sm text-gray-400">{item.date}</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 mb-1.5 group-hover:text-orange-600 transition-colors">
                   {item.title}
                 </h3>
                 <div className="flex items-center text-gray-500 text-sm">
@@ -98,9 +98,9 @@ export default function MediaPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-900 text-white text-center px-4">
-        <h2 className="text-3xl font-bold mb-6">Want to interview me?</h2>
-        <p className="text-gray-400 max-w-2xl mx-auto mb-8">
+      <section className="py-12 md:py-16 bg-gray-900 text-white text-center px-4">
+        <h2 className="text-3xl font-bold mb-4">Want to interview me?</h2>
+        <p className="text-gray-400 max-w-2xl mx-auto mb-6">
           I&apos;m always open to discussing growth, bootstrapping, and AI with
           interesting hosts and journalists.
         </p>

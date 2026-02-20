@@ -18,7 +18,7 @@ export default function StartupCoachingPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-40 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-50 to-white">
+      <section className="pt-44 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-50 to-white">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block px-4 py-2 bg-orange-100 text-orange-600 rounded-full mb-6">
@@ -383,7 +383,9 @@ export default function StartupCoachingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <a
-              href="#"
+              href="https://www.learnlikeme.ai/free-resources"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-orange-600 transition-all group"
             >
               <Download
@@ -396,7 +398,9 @@ export default function StartupCoachingPage() {
               <p className="text-gray-600 text-sm">Battle-tested frameworks</p>
             </a>
             <a
-              href="#"
+              href="https://www.learnlikeme.ai/free-resources"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-orange-600 transition-all group"
             >
               <Download
@@ -411,7 +415,9 @@ export default function StartupCoachingPage() {
               </p>
             </a>
             <a
-              href="#"
+              href="https://www.learnlikeme.ai/free-resources"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-orange-600 transition-all group"
             >
               <Download
@@ -424,7 +430,9 @@ export default function StartupCoachingPage() {
               <p className="text-gray-600 text-sm">Optimize your site</p>
             </a>
             <a
-              href="#"
+              href="https://www.learnlikeme.ai/free-resources"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-orange-600 transition-all group"
             >
               <Download

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ClientHydrationBoundary } from "./components/ClientHydrationBoundary";
 
 export const metadata: Metadata = {
   title: "Growth Advisory",
@@ -13,8 +14,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning>
+        <ClientHydrationBoundary>{children}</ClientHydrationBoundary>
+      </body>
     </html>
   );
 }
