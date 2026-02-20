@@ -51,7 +51,7 @@ export default function BlogPage() {
       <Navigation />
 
       {/* Header */}
-      <section className="pt-40 pb-16 px-4 sm:px-6 lg:px-8 bg-gray-50 border-b border-gray-200">
+      <section className="pt-44 pb-16 px-4 sm:px-6 lg:px-8 bg-gray-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Insights & Essays
@@ -64,23 +64,23 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          {/* Categories */}
-          <div className="flex flex-wrap gap-4 mb-12 justify-center">
-            <button className="px-6 py-2 bg-black text-white rounded-full text-sm font-semibold">
+          {/* Categories - two lines: 3 tags then 2 */}
+          <div className="grid grid-cols-3 gap-2 sm:gap-3 max-w-lg mx-auto mb-8">
+            <button className="px-4 py-2 bg-black text-white rounded-full text-sm font-semibold sm:col-span-1">
               All
             </button>
-            <button className="px-6 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full text-sm font-semibold transition-colors">
+            <button className="px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full text-sm font-semibold transition-colors">
               Growth Strategy
             </button>
-            <button className="px-6 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full text-sm font-semibold transition-colors">
+            <button className="px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full text-sm font-semibold transition-colors">
               AI & Automation
             </button>
-            <button className="px-6 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full text-sm font-semibold transition-colors">
+            <button className="px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full text-sm font-semibold transition-colors col-start-2">
               Mindset
             </button>
-            <button className="px-6 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full text-sm font-semibold transition-colors">
+            <button className="px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full text-sm font-semibold transition-colors">
               Scaling
             </button>
           </div>

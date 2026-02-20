@@ -10,7 +10,7 @@ export function Navigation() {
   const profileSrc = typeof profilePic === "string" ? profilePic : profilePic.src;
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 flex flex-col font-sans">
+    <div className="fixed top-0 left-0 right-0 z-50 flex flex-col font-sans bg-white">
       {/* Top Banner */}
       <div className="bg-[#ff4d00] text-white text-center py-2.5 px-4">
         <p className="font-serif italic text-lg tracking-wide">
@@ -19,9 +19,9 @@ export function Navigation() {
       </div>
 
       {/* Main Navigation */}
-      <nav className="bg-white/95 backdrop-blur-sm border-b border-gray-200">
+      <nav className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center h-20 pt-2">
             {/* Logo / Profile */}
             <Link href="/" className="flex items-center group">
               <div className="relative mr-3 overflow-hidden rounded-full border-2 border-orange-100 group-hover:border-orange-600 transition-colors">

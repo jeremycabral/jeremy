@@ -187,12 +187,14 @@ export function ScaleUpAdvisory() {
               <p className="text-xl text-orange-50 mb-8">
                 Not ready for ongoing advisory? Book a one-off strategy session with comprehensive documentation and actionable playbooks.
               </p>
-              <Link 
-            to="/apply" 
+              <a 
+                href="https://api.leadconnectorhq.com/widget/booking/pQ17EnAoNlzccW9ACRB5" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-colors text-lg font-semibold"
               >
                 Book a Deep Dive <ArrowRight className="ml-2" size={20} />
-              </Link>
+              </a>
             </div>
           </div>
         </div>

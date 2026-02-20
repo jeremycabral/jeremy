@@ -18,7 +18,7 @@ export default function ScaleUpAdvisoryPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-40 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-50 to-white">
+      <section className="pt-44 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-50 to-white">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block px-4 py-2 bg-orange-100 text-orange-600 rounded-full mb-6">
@@ -266,7 +266,9 @@ export default function ScaleUpAdvisoryPage() {
                 with comprehensive documentation and actionable playbooks.
               </p>
               <Link
-                href="/apply/deepdive"
+                href="https://api.leadconnectorhq.com/widget/booking/pQ17EnAoNlzccW9ACRB5"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-colors text-lg font-semibold"
               >
                 Book a Deep Dive <ArrowRight className="ml-2" size={20} />

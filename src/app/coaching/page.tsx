@@ -8,7 +8,7 @@ export default function CoachingPage() {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      <section className="pt-40 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-44 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Three Paths. One Goal: <span className="text-orange-600">Growth.</span>
@@ -156,7 +156,9 @@ export default function CoachingPage() {
                 Learn More
               </Link>
               <Link
-                href="/apply/strategy"
+                href="https://api.leadconnectorhq.com/widget/booking/pQ17EnAoNlzccW9ACRB5"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full py-3 text-center bg-orange-600 text-white rounded-xl font-bold hover:bg-orange-700 transition-colors shadow-lg shadow-orange-200"
               >
                 Book Deep Dive
@@ -170,7 +172,9 @@ export default function CoachingPage() {
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Not sure which path is right?</h2>
         <p className="text-gray-600 mb-8">Book a discovery call and we can discuss where you fit.</p>
         <Link
-          href="/apply"
+          href="https://api.leadconnectorhq.com/widget/booking/pQ17EnAoNlzccW9ACRB5"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-orange-600 font-semibold hover:text-orange-700 flex items-center justify-center"
         >
           Book a Discovery Call <ArrowRight className="ml-2" size={20} />

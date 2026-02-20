@@ -7,7 +7,7 @@ export default function NewsletterPage() {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      <section className="pt-40 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-44 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="w-16 h-16 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-8">
             <Mail size={32} />

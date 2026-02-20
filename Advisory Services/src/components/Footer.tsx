@@ -66,7 +66,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://www.learnlikeme.ai/free-resources/founders-operating-system" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-600 transition-colors">
+                <a href="https://www.learnlikeme.ai/free-resources/linkedin-growth-workshop-jeremy-cabral-braith-leung" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-600 transition-colors">
                   LinkedIn Growth
                 </a>
               </li>
